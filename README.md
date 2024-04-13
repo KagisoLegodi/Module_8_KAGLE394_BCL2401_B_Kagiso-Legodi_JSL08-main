@@ -1,39 +1,33 @@
-# [JSL08] Submission: Singleton Pattern for Bank Branch Management
+# README
 
-You will:
-1. Use the provided Starter Code Repository: https://github.com/CodeSpace-Academy/Module_8_StudentNo_Classcode_Group_Name-Surname_JSL08
-2. Code your solution.
-3. Commit changes to your GitHub repository.
-4. Submit the GitHub Repository Link to the LMS [JSL08] Submission Project Tab.
+## Overview
 
-This one will be a little tricky. So check out this overview first: https://www.youtube.com/watch?v=sJ-c3BA-Ypo
+This code demonstrates the implementation of a Singleton design pattern for managing bank branch information. The Singleton pattern ensures that only one instance of a class is created and provides a global point of access to that instance.
 
-Check out the practice challenges on Scrimba here: https://scrimba.com/playlist/pKJewwyu4
+## Implementation
 
-A Singleton pattern ensures that a class has only one instance and provides a global point of access to it. For our banking system, let's use the Singleton pattern to manage the bank's branch information.
+1. **Singleton Instance Variable**
+   - A variable named `bankBranchInstance` is created to store the singleton instance of the bank branch.
 
-Design patterns like Singleton, Factory, and Observer can significantly improve the structure and maintainability of your JavaScript projects, making your code cleaner and more efficient. By understanding and applying these patterns, you'll be well-equipped to tackle complex design challenges in your projects, just as a well-organized bank efficiently manages its operations and services.
+2. **BankBranch Class**
+   - A class called `BankBranch` is defined for managing branch information.
 
-## What You Need to Do:
+3. **Constructor**
+   - The constructor of the `BankBranch` class takes `branchInfo` as a parameter.
+   - Inside the constructor, it checks if the `bankBranchInstance` variable is null (indicating no instance exists).
+     - If `bankBranchInstance` is null, it creates a new instance with the provided `branchInfo` and assigns it to `bankBranchInstance`.
+     - If `bankBranchInstance` is not null, it returns the existing `bankBranchInstance`.
 
-1. Clone the provided Starter Code Repository to your local development environment (e.g., VSCode): https://github.com/CodeSpace-Academy/Module_8_StudentNo_Classcode_Group_Name-Surname_JSL08
-2. Open the cloned project in your code editor.
-3. Code your solution for each of the challenges as per the provided instructions.
-4. Commit your changes to your local Git repository with meaningful commit messages.
-5. Push your local Git repository to your GitHub account.
-6. Verify that the changes have been successfully pushed to your GitHub repository.
+4. **Methods**
+   - Methods are added to the `BankBranch` class for managing branch-related information.
+   - The `getBranchInfo` method retrieves branch information.
 
-## What You Need to Include:
+## Usage
 
-1. Ensure that your code includes the necessary modifications to meet the challenge requirements.
-2. Your GitHub repository should contain the updated code files.
+- Instances of the `BankBranch` class, such as `branchA` and `branchB`, are created with different branch information.
+- The `getBranchInfo` method is used to retrieve branch information from the instances.
+- It's verified that `branchA` and `branchB` are both referring to the same instance by comparing them using `===`.
 
-## How We'll Assess Your Work:
+## Dependencies
 
-1. We will review your GitHub repository to ensure that it contains the updated code files.
-2. We will assess the modifications made to the code to verify that they effectively meet the challenge requirements.
-3. We will consider the commit history and meaningful commit messages to evaluate your coding process.
-
-This challenge will test your ability to create a function with the Singleton Pattern. Woohoo! Your first design pattern!
-
-
+- JavaScript
